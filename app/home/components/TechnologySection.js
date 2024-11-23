@@ -4,85 +4,87 @@ export default function TechnologySection() {
     const technologies = [
         {
             name: "React",
-            description:
-                "A powerful JavaScript library for building fast and interactive user interfaces. React 18 introduces Concurrent Rendering for smoother updates.",
+            description: "A library for building fast, interactive user interfaces with modern features like Concurrent Rendering.",
             icon: "/react-icon.svg",
         },
         {
             name: "Next.js",
-            description:
-                "A React framework for building SEO-friendly and high-performance web applications. Next.js 13 includes a new App Router and improved server components.",
+            description: "A React framework for building SEO-friendly and high-performance web apps with advanced server components.",
             icon: "/next-icon.svg",
         },
         {
-            name: "Node.js",
-            description:
-                "A runtime environment that allows you to build scalable and efficient server-side applications. Node.js 20 includes support for ESM modules and enhanced performance.",
-            icon: "/node-icon.svg",
-        },
-        {
             name: "Express.js",
-            description:
-                "A minimalist web framework for Node.js, providing robust routing and middleware support. Known for flexibility and simplicity in building APIs.",
+            description: "A lightweight Node.js framework for flexible API development and robust routing.",
             icon: "/express-icon.svg",
         },
         {
             name: "MongoDB",
-            description:
-                "A flexible NoSQL database solution, ideal for modern and dynamic applications. MongoDB 7 includes columnstore indexing for faster analytics.",
+            description: "A NoSQL database for modern applications, offering flexibility and fast analytics.",
             icon: "/mongo-icon.svg",
         },
         {
-            name: "TypeScript",
-            description:
-                "A strongly typed superset of JavaScript for building large applications with confidence. TypeScript 5.3 offers enhanced type-checking and ESNext compatibility.",
-            icon: "/typescript-icon.svg",
-        },
-        {
             name: "Tailwind CSS",
-            description:
-                "A utility-first CSS framework that provides rapid styling capabilities with flexibility and responsiveness.",
+            description: "A utility-first CSS framework for rapid styling with flexibility and responsiveness.",
             icon: "/tailwind-icon.svg",
-        },
-        {
-            name: "Vercel",
-            description:
-                "A platform to build, deploy, and manage containerized applications, ensuring consistency across environments.",
-            icon: "/vercel-icon.svg",
         },
     ];
 
+
     return (
-        <section className="py-16 bg-violet-100 dark:bg-darkBackground">
-            <div className="container mx-auto px-6 text-center">
-                <h2 className="text-4xl md:text-5xl font-extrabold dark:text-bgColor text-violet-600 mb-8">
-                    Technologies We Use
-                </h2>
-                <p className="text-lg md:text-xl text-gray-700 dark:text-gray-200 max-w-3xl mx-auto mb-12">
-                    Harnessing the latest and most reliable technologies to deliver cutting-edge
-                    solutions tailored to your business needs.
-                </p>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="py-16 bg-violet-100 text-center dark:bg-darkBackground">
+            <h2 className="sm:text-3xl text-2xl border-2 border-primaryTextBlack dark:border-violet-500 dark:text-violet-500 inline-block px-5 py-2 rounded-full font-bold  text-primaryTextBlack mb-6">
+                Technologies We Use
+            </h2>
+            <p className="text-lg md:text-xl text-gray-700 dark:text-gray-200 max-w-3xl px-6 mx-auto mb-12">
+                Harnessing the latest and most reliable technologies to deliver cutting-edge
+                solutions tailored to your business needs.
+            </p>
+            <div className="flex flex-col-reverse md:flex-row items-center gap-5 justify-between  md:px-16">
+                <div className="w-full md:w-2/3 grid md:grid-cols-2 gap-2">
                     {technologies.map((tech, index) => (
                         <div
                             key={index}
-                            className="p-8 bg-gray-100 dark:bg-gray-200 rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 hover:scale-105 transition-all duration-300"
+                            className="p-3  flex items-start rounded-lg"
                         >
-                            <div className="mb-6">
-                                <Image
-                                    src={tech.icon}
-                                    alt={`${tech.name} icon`}
-                                    width={64}
-                                    height={64}
-                                    className="mx-auto"
-                                />
+                            <div className="border-r-4 dark:bg-violet-100 border-b-4 p-3 border-l border-t border-violet-500">
+                                <div className="w-12 md:w-16 md:h-16 h-12">
+                                    <Image
+                                        src={tech.icon}
+                                        alt={`${tech.name} icon`}
+                                        width={200}
+                                        height={200}
+                                        className="mx-auto w-full h-full"
+                                    />
+                                </div>
+
                             </div>
-                            <h3 className="text-xl font-bold text-violet-600 mb-2">{tech.name}</h3>
-                            <p className="text-gray-600 text-sm">{tech.description}</p>
+
+                            <div className="px-3">
+                                <h3 className="md:text-lg font-semibold text-left dark:text-white text-primaryTextBlack ">{tech.name}</h3>
+                                <p className="text-gray-600 dark:text-gray-200 text-left text-sm">{tech.description}</p>
+                            </div>
+
                         </div>
                     ))}
+                    <div>
+
+                        <div className="p-3  flex flex-col items-start rounded-lg">
+                            <h3 className="md:text-lg font-semibold text-left dark:text-white text-primaryTextBlack ">And Many More</h3>
+                            <p className="text-gray-600 dark:text-gray-200 text-left text-sm">Explore a wide range of modern tools and frameworks designed to boost development efficiency.</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="w-full md:w-1/3 mb-8 text-red-400 md:mb-0">
+                    <Image
+                        src='/developer-icon.svg'
+                        alt="multitasking" width={600}
+                        height={400}
+                        className="w-2/3 mx-auto text-red-400 md:w-full h-auto"
+                        priority />
                 </div>
             </div>
-        </section>
+        </div>
+
+
     );
 }

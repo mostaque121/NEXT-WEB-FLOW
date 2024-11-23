@@ -13,7 +13,7 @@ const config: Config = {
         lightBackground: "#FFFFFF",
         darkBackground: "#191919",
         primaryTextBlack: "#03122f",
-        bgColor: "#dcbfc5",
+        bgColor: "#f1e4e8",
         secondaryText: "#666666",
         accent: "#0066CC",
         hoverButton: "#004B8D",
