@@ -1,7 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
-import Link from "next/link";
 
 const websiteTypes = [
     {
@@ -44,26 +42,17 @@ const websiteTypes = [
 
 export default function WebsiteTypesPage() {
     return (
-        <div className="container mx-auto px-4 py-16">
+        <div className="dark:bg-darkBackground mx-auto px-4 md:px-6 py-16">
             <h1 className="text-4xl font-bold text-center mb-8">Types of Websites We Create</h1>
             <p className="text-xl text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
                 From e-commerce platforms to corporate sites, we build tailored web solutions to meet your specific needs.
             </p>
 
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+            <div className="grid gap-5 md:grid-cols-2 md:px-16 lg:grid-cols-3">
                 {websiteTypes.map((type, index) => (
                     <WebsiteTypeCard key={index} {...type} />
                 ))}
-            </div>
-
-            <div className="mt-16 text-center">
-                <h2 className="text-3xl font-bold mb-4">Need a custom website?</h2>
-                <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                    We can create a bespoke website tailored to your unique requirements.
-                </p>
-                <Button asChild size="lg">
-                    <Link href="/contact">Discuss Your Project</Link>
-                </Button>
             </div>
         </div>
     );
@@ -71,7 +60,7 @@ export default function WebsiteTypesPage() {
 
 function WebsiteTypeCard({ title, description, image, features }) {
     return (
-        <Card className="flex bg-white flex-col">
+        <Card className="flex dark:bg-black bg-gray-50 border-none flex-col">
             <CardHeader>
                 <div className="h-64 w-full">
                     <Image
@@ -79,12 +68,12 @@ function WebsiteTypeCard({ title, description, image, features }) {
                         alt={title}
                         width={300}
                         height={200}
-                        className="rounded-lg object-contain w-full"
+                        className="rounded-lg object-contain w-full h-full"
                     />
                 </div>
 
             </CardHeader>
-            <CardContent className="flex-grow bg-slate-500">
+            <CardContent className="flex-grow ">
                 <CardTitle className="text-xl mb-2">{title}</CardTitle>
                 <CardDescription className="mb-4">{description}</CardDescription>
                 <ul className="list-disc list-inside text-sm text-muted-foreground">
@@ -93,11 +82,7 @@ function WebsiteTypeCard({ title, description, image, features }) {
                     ))}
                 </ul>
             </CardContent>
-            <CardFooter>
-                <Button asChild variant="outline" className="w-full">
-                    <Link href="/contact">Learn More</Link>
-                </Button>
-            </CardFooter>
+
         </Card>
     );
 }

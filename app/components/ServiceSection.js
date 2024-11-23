@@ -1,5 +1,5 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 export default function ServiceSection() {
 
     return (
@@ -48,7 +48,6 @@ export default function ServiceSection() {
                                         Contact Us
                                     </button>
                                 </Link>
-
                             </div>
                         </div>
 

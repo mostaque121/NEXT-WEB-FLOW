@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,11 +17,11 @@ export default function HeroSection() {
                         for your business success. Let us bring your vision to life.
                     </p>
                     <div className="mt-8 flex flex-col md:flex-row gap-4">
-                        <button className="bg-violet-500 transition-all w-full duration-200 ease-in-out dark:bg-violet-500 hover:dark:bg-violet-600 dark:text-white hover:bg-transparent hover:border-white border  border-violet-500 text-white font-semibold py-3 px-6 rounded shadow-md">
+                        <button className="bg-violet-500 transition-all w-full duration-200 ease-in-out dark:bg-violet-500 hover:dark:bg-violet-600 dark:text-white hover:bg-transparent hover:border-violet-500 border hover:text-violet-500 border-violet-500 text-white font-semibold py-3 px-6 rounded shadow-md">
                             View Portfolio
                         </button>
                         <Link href={`#contact-form`} className="w-full">
-                            <button className="border transition-all w-full duration-200 ease-in-out dark:border-none border-white hover:bg-transparent dark:bg-bgColor dark:text-primaryTextBlack bg-white hover:shadow-2xl hover:border-violet-500 hover:dark:bg-white hover:text-violet-600 py-3 px-6 rounded font-semibold">
+                            <button className="border transition-all w-full duration-200 ease-in-out dark:border-none border-white hover:bg-transparent dark:bg-bgColor dark:text-primaryTextBlack bg-white hover:dark:shadow-2xl hover:dark:shadow-white hover:border-violet-500 hover:dark:bg-white hover:text-violet-600 py-3 px-6 rounded font-semibold">
                                 Request A Quote
                             </button>
                         </Link>
